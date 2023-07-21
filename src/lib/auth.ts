@@ -60,8 +60,6 @@ export const authOptions: NextAuthOptions = {
 						},
 					})
 					.then((res) => {
-						console.log("Guilds", res.data);
-
 						const guilds = DiscordGuildSchema.array().parse(res.data);
 
 						return {
